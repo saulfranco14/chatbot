@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "virtualsaul-qli9",
+  "private_key_id": "eda68b58a66088e3239ee083836949af1cd605a1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC36UlvXJ/RbLCw\nhDv/x9U3Om8sxJQ7E/nA79Jx8UzY9QtO77EUrU9n3iiHINKmGqNWwzkkz++YbF6H\nEOYYxMsSx0P4qiwHG7coDOZG4wkSgsbw11HE2hDl1cPUD4S7O3DNnakQqNOzSBqy\n/4QmzKfKkwjfvugQ48uF06xVJ2+zkfM8XQAn4HrI4pJJ+HiL9b3Qdq+3xZkJ/LW0\nDWlOsdbYY9bsknfm5bT1g36puyL+9YR/SnthfHB3yCP3e9v24phDp1glOi5QtRN5\nUlRnKUtSz9ykF+VSBCC2Ot3F7+lUrJ/5GhDe2DRWF0sUxJA0n2NFad9s1pN5kCTd\nAB4IlMMDAgMBAAECggEACF26PIYj+e2fx8/dBxX5CRyFOZ+8U506oAdMZxNOg5L5\nq/7Bsi4n5r1QfIvU3NwTsKk2uPuzcpc6GkWaIufBUWGlTKUOAHQclngZ+dZSr5t+\n0S57PAvWWw8aiEWLVuqmeRFiQzSUqpPmu3jPnclWjVybR+dD0hBtanFbrWUa68hD\nDrlVWOfgAKZ3vJRsrXpBr26cJQG0AZRuvT4Q/o7SM9A26iFuto0PedGXDQHaKCck\nmyLJBO5cJt7MTVacw6AtWhBuByI0NEZy3BWRII/f+tY4Ah2kytPJi8/mDKsEIp9q\nK358lG98iUqmfjrCOdPZE7g9uEsUJ3FQIUbguPb4MQKBgQDnuHoWv6ST+ObiMCaL\nWmiXNu+n4Bo2M1KdWni9bf1Ti2T0MGeZSBH5QYcdVk4gbBwgRFQbwLFE0ePBP6P1\n8MQ4nfA0558fwIxgWfAiKnUxla5y9WFwSciRT28VdHCa94S3qJzObg+Na6jGWY2i\ntDWMWBjg4oZM8wTiX1Jxu4nskwKBgQDLLmdErNa2bX+cn6DrulZPLjpEOiVbgXzH\n/9015t/7ub8hz0qQYqvZc+v4pdDtvFAFf1VLHYsZpLad6JJqsMPRIaN+jC4S+38n\nVY8dxl2yvVQAywlZEeVJahP+/zvUbV3XdCZVnrQt7Q3EYpD9QsDEOIZaV1Ckf4Ay\nCNQtCE1F0QKBgQCgJ3C6qFonq7BoRL9fMW14lg+uB8YWEALZnt40jwC37XApFguE\ndbt2e0PXkv8Miawm4RMA232qAydXOZUpNu9n8kFDT5M7bumW7pJ6Cr5VNw8LhW2D\nHnvxcuVj/saVVN310iQOySMWq4JLFTo/ai5YgcswI2CPbqfBjgB9exEo4QKBgBfD\ncJ6OnHovqlo2LUsEuy19maD7L/1Y0rBNk6DHRPEbE2iv5uemMrU3IqUtN5dmi/Fo\nqCAl72vrYNRtLBrAW9as2YNmf8kGkyOVlSyFU9Yg4J9LH+fD+Q4yEu6jCWtZ8zzM\nv+MJscchT5flc1G7qfIJLmWIis0CgIrZj39I1kjRAoGAGx9ktdviMWOLCbeGIqLq\nUkLsU9OZIemOvKFcoB2urUtOU61okubxQyPXqrjwPYbAi9eK1xhkiVhk71eYVDZy\nD4bKfSBRRpRz0lHAAhqTDveG5UI6DWMJGwveysmb74Vim5KYdZagEjJXqk0BHqwa\nxbZTK9fSEDScfgjJablQPmc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "saulbot@virtualsaul-qli9.iam.gserviceaccount.com",
+  "client_id": "114468698625970350718",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/saulbot%40virtualsaul-qli9.iam.gserviceaccount.com"
+}
