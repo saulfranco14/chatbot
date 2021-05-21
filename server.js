@@ -1,8 +1,12 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
+const express       = require("express");
+const bodyParser    = require("body-parser");
+const connectionDB  = require('./config/configMongo');
+const app           = express();
 
 const port = process.env.PORT || 3000;
+
+//conectar a la BD
+connectionDB();
 
 // for parsing json
 app.use(

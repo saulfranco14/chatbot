@@ -1,13 +1,17 @@
 //libraries
-const express = require("express");
-const router = express.Router();
-const request = require("request");
-const uuid = require("uuid");
-const axios = require("axios");
+const express       = require("express");
+const router        = express.Router();
+const request       = require("request");
+const uuid          = require("uuid");
+const axios         = require("axios");
+
 //files
-const config = require("../config");
-const dialogflow = require("../dialogflow");
+const config                = require("../config");
+const dialogflow            = require("../dialogflow");
 const { structProtoToJson } = require("./helpers/structFunctions");
+
+// ModelsChatbot
+const ChatBotUser           = require("../models/Users");
 
 // Messenger API parameters
 if (!config.FB_PAGE_TOKEN) {
@@ -108,6 +112,11 @@ async function receivedMessage(event) {
     handleQuickReply(senderId, quickReply, messageId);
     return;
   }
+
+  // Create User Mongo
+  saveUserMongo(senderId);
+
+
   if (messageText) {
     //send message to dialogflow
     console.log("MENSAJE DEL USUARIO: ", messageText);
@@ -115,6 +124,27 @@ async function receivedMessage(event) {
   } else if (messageAttachments) {
     handleMessageAttachments(messageAttachments, senderId);
   }
+}
+
+async function saveUserMongo(faceBookId) {
+
+  let userFace = await getUserData(faceBookId);
+
+  console.log("USER FACE");
+  console.log(userFace);
+  console.log("USER FACE");
+
+  let userBot = new ChatBotUser({
+    nombre : userFace.first_name,
+    apellido_paterno : userFace.last_name,
+    facebook_id : userFace.faceBookId,
+    profile_pic : userFace.profile_pic
+  });
+  
+  let response = await userBot.save();
+  console.log("USER BOT");
+  console.log(response);
+  console.log("USER BOT");
 }
 
 function handleMessageAttachments(messageAttachments, senderId) {
@@ -310,10 +340,15 @@ function handleDialogFlowResponse(sender, response) {
     sendTextMessage(sender, responseText);
   }
 }
+
+/* Función que trae la información del contacto */ 
 async function getUserData(senderId) {
+
   console.log("consiguiendo datos del usuario...");
   let access_token = config.FB_PAGE_TOKEN;
+
   try {
+
     let userData = await axios.get(
       "https://graph.facebook.com/v6.0/" + senderId,
       {
@@ -322,13 +357,15 @@ async function getUserData(senderId) {
         },
       }
     );
+
     return userData.data;
+    
   } catch (err) {
     console.log("algo salio mal en axios getUserData: ", err);
     return {
-      first_name: "",
-      last_name: "",
-      profile_pic: "",
+      first_name    : "",
+      last_name     : "",
+      profile_pic   : "",
     };
   }
 }
